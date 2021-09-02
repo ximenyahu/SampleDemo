@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_mobile"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.sampledemo.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_glideFragment"
+            app:destination="@id/glideFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_retrofitFragment"
+            app:destination="@id/retrofitFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_rxHttpFragment"
+            app:destination="@id/rxHttpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/glideFragment"
+        android:name="com.example.sampledemo.glide.GlideFragment"
+        android:label="GlideFragment" />
+    <fragment
+        android:id="@+id/retrofitFragment"
+        android:name="com.example.sampledemo.retrofit.RetrofitFragment"
+        android:label="RetrofitFragment" />
+    <fragment
+        android:id="@+id/rxHttpFragment"
+        android:name="com.example.sampledemo.rxhttp.RxHttpFragment"
+        android:label="RxHttpFragment" />
+</navigation>
